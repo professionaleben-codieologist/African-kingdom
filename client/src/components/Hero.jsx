@@ -40,37 +40,37 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-yellow-700/10 z-10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-yellow-700/20 z-10" />
 
-      <div className="relative z-20 px-4 max-w-4xl mx-auto">
-        <p className="text-yellow-600 tracking-[0.5em] uppercase text-sm mb-6">
+      <div className="relative z-20 px-4 max-w-4xl mx-auto w-full">
+        <p className="text-yellow-600 tracking-[0.3em] md:tracking-[0.5em] uppercase text-xs md:text-sm mb-4 md:mb-6">
           Owo, Ondo State · Nigeria
         </p>
 
-        <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-4">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-white leading-tight mb-3 md:mb-4">
           African <span className="text-yellow-500">Kingdom</span>
         </h1>
 
-        <p className="text-yellow-600 tracking-[0.4em] uppercase text-base md:text-lg mb-2">
+        <p className="text-yellow-600 tracking-[0.3em] md:tracking-[0.4em] uppercase text-sm md:text-lg mb-2">
           Restaurant · Bar · Club
         </p>
 
-        <div className="gold-divider my-6" />
+        <div className="gold-divider my-4 md:my-6" />
 
-        <p className="text-gray-300 text-lg md:text-2xl font-serif italic mb-10">
+        <p className="text-gray-300 text-base md:text-2xl font-serif italic mb-6 md:mb-10">
           "Owo's Premier Destination"
         </p>
 
-        <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto mb-10 tracking-wide">
+        <p className="text-gray-400 text-xs md:text-base max-w-xl mx-auto mb-8 md:mb-10 tracking-wide leading-relaxed">
           Experience the finest dining, premium cocktails, and electrifying nightlife
           in the heart of Owo. Where luxury meets African culture.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#reservations" className="btn-gold">
+        <div className="flex flex-col gap-3 justify-center items-center sm:flex-row sm:gap-4">
+          <a href="#reservations" className="btn-gold w-full sm:w-auto text-center">
             Book a VIP Table
           </a>
           <a
             href="#menu"
-            className="border border-yellow-600 text-yellow-500 hover:bg-yellow-600/10 py-3 px-8 transition-all duration-300 tracking-widest uppercase text-sm"
+            className="border border-yellow-600 text-yellow-500 hover:bg-yellow-600/10 py-3 px-8 transition-all duration-300 tracking-widest uppercase text-sm w-full sm:w-auto text-center"
           >
             View Menu
           </a>

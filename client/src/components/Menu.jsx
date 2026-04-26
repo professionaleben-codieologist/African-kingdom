@@ -33,11 +33,11 @@ function getFallbackImage(itemName, section) {
 function MenuCard({ item, section }) {
   const img = item.image_url || getFallbackImage(item.name, section);
   return (
-    <div className="bg-[#1A1A1A] border border-[#2A2A2A] hover:border-yellow-700/50 transition-all duration-300 flex overflow-hidden">
+    <div className="bg-[#1A1A1A] border border-[#2A2A2A] hover:border-yellow-700/50 transition-all duration-300 flex flex-col sm:flex-row overflow-hidden">
       <img
         src={img}
         alt={item.name}
-        className="w-28 h-28 object-cover flex-shrink-0"
+        className="w-full h-40 sm:w-28 sm:h-28 object-cover flex-shrink-0"
         loading="lazy"
       />
       <div className="flex flex-1 items-start justify-between gap-3 p-4">
@@ -145,12 +145,12 @@ export default function Menu() {
         {!loading && !error && sections.length > 0 && (
           <>
             {/* Section tabs */}
-            <div className="flex justify-center gap-2 mt-10 mb-10 flex-wrap">
+            <div className="flex justify-start sm:justify-center gap-2 mt-10 mb-10 overflow-x-auto pb-2 scrollbar-none">
               {sections.map(sec => (
                 <button
                   key={sec}
                   onClick={() => setActiveSection(sec)}
-                  className={`px-6 py-2 text-sm tracking-widest uppercase transition-all duration-200 border ${
+                  className={`px-6 py-2 text-sm tracking-widest uppercase transition-all duration-200 border whitespace-nowrap flex-shrink-0 ${
                     activeSection === sec
                       ? 'bg-yellow-600 text-black border-yellow-600 font-bold'
                       : 'border-yellow-700/40 text-yellow-600 hover:border-yellow-500'

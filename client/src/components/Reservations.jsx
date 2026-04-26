@@ -76,7 +76,7 @@ export default function Reservations() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="bg-[#1A1A1A] border border-[#2A2A2A] p-6 md:p-8 space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-yellow-600 text-xs tracking-widest uppercase mb-2">
                   Full Name *
@@ -121,7 +121,7 @@ export default function Reservations() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
                 <label className="block text-yellow-600 text-xs tracking-widest uppercase mb-2">
                   Date *
