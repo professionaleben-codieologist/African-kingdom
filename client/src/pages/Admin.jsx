@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
 
-const PASSWORD = 'africankingdom2026';
+const PASSWORD = 'AfricanKingdom@Owo';
 
 const STATUS_STYLES = {
   pending:   'bg-yellow-900/40 text-yellow-400 border border-yellow-700/50',
