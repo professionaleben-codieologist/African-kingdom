@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const slides = [
-  "https://lh3.googleusercontent.com/p/AF1QipOCfLMlTDaTZZ8IvJ166zpGQbAo4scuY6MbgY0O=s680-w680-h510-rw",
+  "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=1920&q=80",
   "https://lh3.googleusercontent.com/p/AF1QipNgVH-7daafbIFw_A5OOPN5gFubfO2EGUACzykr=s680-w680-h510-rw",
   "https://lh3.googleusercontent.com/p/AF1QipPOdCRTmPNyEwfWdvkDjgednLbCCwMzBnoMfyKL=s680-w680-h510-rw",
 ];
@@ -19,22 +19,25 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center text-center overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center text-center overflow-hidden"
     >
       {/* Slideshow backgrounds */}
       {slides.map((src, i) => (
         <div
           key={src}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          className="absolute inset-0 transition-opacity duration-1000"
           style={{
             backgroundImage: `url('${src}')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
             opacity: i === current ? 1 : 0,
           }}
         />
       ))}
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/75" />
+      {/* Dark overlay — slightly heavier for readability on any crop */}
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* Decorative gold circles */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-yellow-700/10 z-10" />

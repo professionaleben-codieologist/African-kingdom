@@ -1,33 +1,33 @@
 const features = [
   {
-    icon: '📅',
+    icon: '🍽️',
     title: 'Accepts Reservations',
     desc: 'Book your table in advance for a guaranteed VIP experience.',
   },
   {
-    icon: '🍽️',
-    title: 'Dine-in, Drive-through & Delivery',
-    desc: 'Enjoy our food your way — at the table, on the go, or at home.',
-  },
-  {
-    icon: '🍹',
-    title: 'Great Cocktails & Beer Selection',
-    desc: 'Premium spirits, craft cocktails, and a wide range of cold beers.',
-  },
-  {
     icon: '💳',
-    title: 'Card & NFC Payments Accepted',
-    desc: 'Pay seamlessly with card, tap-to-pay, or cash.',
+    title: 'Multiple Payment Options',
+    desc: 'Credit cards, debit cards & NFC mobile payments accepted.',
   },
   {
     icon: '👨‍👩‍👧',
-    title: 'Good for Kids',
-    desc: 'A welcoming atmosphere the whole family can enjoy.',
+    title: 'Family Friendly',
+    desc: 'Good for kids, perfect for family outings.',
   },
   {
     icon: '🅿️',
-    title: 'Free Parking Available',
-    desc: 'Ample free parking right at our premises.',
+    title: 'Free Parking',
+    desc: 'Free street parking and parking lot available.',
+  },
+  {
+    icon: '🍸',
+    title: 'Full Bar Service',
+    desc: 'Premium cocktails, wine and spirits.',
+  },
+  {
+    icon: '🚗',
+    title: 'Dine-in & Delivery',
+    desc: 'Dine-in, drive-through and delivery available.',
   },
 ];
 
@@ -35,17 +35,26 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-[#111111]">
       <div className="max-w-5xl mx-auto px-4">
+
+        {/* Header */}
         <p className="text-yellow-700 tracking-[0.4em] uppercase text-xs text-center mb-3">
-          The African Kingdom Experience
+          Our Story
         </p>
-        <h2 className="section-title">Why Choose African Kingdom</h2>
+        <h2 className="section-title">About African Kingdom</h2>
         <div className="gold-divider" />
-
-        <p className="text-gray-400 text-center text-sm md:text-base max-w-2xl mx-auto mt-6 mb-14 leading-relaxed tracking-wide">
-          Owo's most celebrated dining and nightlife destination — where authentic African flavours,
-          premium cocktails, and electrifying nightlife come together under one roof.
+        <p className="text-yellow-600/70 text-center text-sm tracking-widest uppercase mt-4 mb-8">
+          Owo's Premier Destination Since Day One
         </p>
 
+        {/* Story */}
+        <p className="text-gray-400 text-center text-sm md:text-base max-w-2xl mx-auto mb-16 leading-relaxed tracking-wide">
+          African Kingdom Restaurant, Bar &amp; Club is Owo's most beloved destination for fine dining,
+          premium cocktails and electrifying nightlife. Located on Oke Ogun Street, opposite the Technical
+          College, we bring you an authentic African experience with rich flavors, warm hospitality and a
+          vibrant atmosphere that keeps you coming back night after night.
+        </p>
+
+        {/* Features grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {features.map(({ icon, title, desc }) => (
             <div
@@ -58,6 +67,7 @@ export default function About() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
